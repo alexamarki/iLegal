@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid">
+    <div align="center">
+        <h3>send your file!</h3>
+        <br>
+        <div class="w-25">
+            <h1 align="left">File submit</h1>
+            <form action="" method="post">
+                {{ form.hidden_tag() }}
+                <p>
+                    <p align="left">{{ form.filedata.label }}</p>
+                    {{ form.filedata(class="form-control", type="file", placeholder="") }}
+                </p>
+                <p>
+                    <p align="left">{{ form.on_display_at.label }}<p>
+                    {{ form.on_display_at(class="form-select") }}
+                </p>
+                <p>{{ form.submit(type="submit", class="btn btn-outline-dark") }}</p>
+                <div>{{ message }}</div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
