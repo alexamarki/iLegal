@@ -8,4 +8,4 @@ class FileForm(FlaskForm):
     on_display_at = SelectField('Output mode',
                                 choices=[('highlight', 'Full document with highlights'),
                                          ('sectioned', 'Portions of the document')])
-    submit = SubmitField('Add parameters')
+    submit = SubmitField('Analyse')
